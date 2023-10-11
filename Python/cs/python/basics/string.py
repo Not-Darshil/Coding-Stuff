@@ -1,0 +1,2 @@
+X='''AYUSH'''
+print(X)

@@ -1,0 +1,483 @@
+mysql> tee b:\mysqlteaching.txt
+mysql> notee
+
+
+mysql> CREATE DTABASE DB2;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'DTABASE DB2' at line 1
+mysql> CREATE DATABASE DB2;
+Query OK, 1 row affected (0.00 sec)
+
+mysql> SHOW DATABASES;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| cyber_cafe         |
+| db1                |
+| db2                |
+| mysql              |
+| students           |
+| test               |
++--------------------+
+7 rows in set (0.00 sec)
+
+mysql> CREATE TABLE STU(RNO  INT, NAME CHAR(20));
+ERROR 1050 (42S01): Table 'stu' already exists
+mysql> USE DB2;
+Database changed
+mysql> CREATE TABLE STU(RNO  INT, NAME CHAR(20));
+Query OK, 0 rows affected (0.13 sec)
+
+mysql> INSERT INTO STU VALUES(4,'SAKSHAM');
+Query OK, 1 row affected (0.02 sec)
+
+
+mysql> #values / value BOTH WORKS IN INSERT COMMAND 
+#HOWEVER VALUES IS BETTER AND UNIVERSAL
+
+mysql> INSERT INTO STU VALUES(6,'DARSHIL');
+Query OK, 1 row affected (0.11 sec)
+
+mysql> SELECT * FROM STU;
++------+---------+
+| RNO  | NAME    |
++------+---------+
+|    4 | SAKSHAM |
+|    6 | DARSHIL |
++------+---------+
+2 rows in set (0.00 sec)
+
+mysql> NO TEE
+    -> ;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'NO TEE' at line 1
+mysql> TEE OFF
+
+#############    mysql restart ###################3
+
+mysql> tee b:\mysqltee1.mysql
+mysql> select database();
++------------+
+| database() |
++------------+
+| NULL       |
++------------+
+1 row in set (0.00 sec)
+
+mysql> notee
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| cyber_cafe         |
+| db1                |
+| db2                |
+| mysql              |
+| students           |
+| test               |
++--------------------+
+7 rows in set (0.00 sec)
+
+mysql> notee
+mysql> use db2;
+Database changed
+mysql> show tables;
++---------------+
+| Tables_in_db2 |
++---------------+
+| stu           |
++---------------+
+1 row in set (0.46 sec)
+
+mysql> select * from stu;
++------+---------+
+| RNO  | NAME    |
++------+---------+
+|    4 | SAKSHAM |
+|    6 | DARSHIL |
++------+---------+
+2 rows in set (0.00 sec)
+
+mysql> insert into stu values(8,'anuj');
+Query OK, 1 row affected (0.11 sec)
+
+mysql> insert into stu values(1,'ayush');
+Query OK, 1 row affected (0.12 sec)
+
+mysql> insert into stu values(18,'vivek');
+Query OK, 1 row affected (0.02 sec)
+
+mysql> insert into stu values(3,'aditya');
+Query OK, 1 row affected (0.11 sec)
+
+mysql> insert into stu values(9,'ankit');
+Query OK, 1 row affected (0.02 sec)
+
+mysql> insert into stu values(15,'harsh');
+Query OK, 1 row affected (0.02 sec)
+
+mysql> select * from stu;
++------+---------+
+| RNO  | NAME    |
++------+---------+
+|    4 | SAKSHAM |
+|    6 | DARSHIL |
+|    8 | anuj    |
+|    1 | ayush   |
+|   18 | vivek   |
+|    3 | aditya  |
+|    9 | ankit   |
+|   15 | harsh   |
++------+---------+
+8 rows in set (0.00 sec)
+
+mysql> select name from stu;
++---------+
+| name    |
++---------+
+| SAKSHAM |
+| DARSHIL |
+| anuj    |
+| ayush   |
+| vivek   |
+| aditya  |
+| ankit   |
+| harsh   |
++---------+
+8 rows in set (0.00 sec)
+
+mysql> select name,rno from stu;
++---------+------+
+| name    | rno  |
++---------+------+
+| SAKSHAM |    4 |
+| DARSHIL |    6 |
+| anuj    |    8 |
+| ayush   |    1 |
+| vivek   |   18 |
+| aditya  |    3 |
+| ankit   |    9 |
+| harsh   |   15 |
++---------+------+
+8 rows in set (0.00 sec)
+
+mysql> 
+mysql> select sum(rno) from stu;
++----------+
+| sum(rno) |
++----------+
+|       64 |
++----------+
+1 row in set (0.13 sec)
+
+mysql> alter table stu add column marks int;
+Query OK, 8 rows affected (0.17 sec)
+Records: 8  Duplicates: 0  Warnings: 0
+
+mysql> describe stu;
++-------+----------+------+-----+---------+-------+
+| Field | Type     | Null | Key | Default | Extra |
++-------+----------+------+-----+---------+-------+
+| RNO   | int(11)  | YES  |     | NULL    |       |
+| NAME  | char(20) | YES  |     | NULL    |       |
+| marks | int(11)  | YES  |     | NULL    |       |
++-------+----------+------+-----+---------+-------+
+3 rows in set (0.01 sec)
+
+mysql> desc stu;
++-------+----------+------+-----+---------+-------+
+| Field | Type     | Null | Key | Default | Extra |
++-------+----------+------+-----+---------+-------+
+| RNO   | int(11)  | YES  |     | NULL    |       |
+| NAME  | char(20) | YES  |     | NULL    |       |
+| marks | int(11)  | YES  |     | NULL    |       |
++-------+----------+------+-----+---------+-------+
+3 rows in set (0.01 sec)
+
+mysql> #rno name and marks are the name of the attributes
+
+mysql> select * from stu;
++------+---------+-------+
+| RNO  | NAME    | marks |
++------+---------+-------+
+|    4 | SAKSHAM |  NULL |
+|    6 | DARSHIL |  NULL |
+|    8 | anuj    |  NULL |
+|    1 | ayush   |  NULL |
+|   18 | vivek   |  NULL |
+|    3 | aditya  |  NULL |
+|    9 | ankit   |  NULL |
+|   15 | harsh   |  NULL |
++------+---------+-------+
+8 rows in set (0.00 sec)
+
+mysql> update stu set marks=99 where rno = 4;
+Query OK, 1 row affected (0.11 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> select * from stu;
++------+---------+-------+
+| RNO  | NAME    | marks |
++------+---------+-------+
+|    4 | SAKSHAM |    99 |
+|    6 | DARSHIL |  NULL |
+|    8 | anuj    |  NULL |
+|    1 | ayush   |  NULL |
+|   18 | vivek   |  NULL |
+|    3 | aditya  |  NULL |
+|    9 | ankit   |  NULL |
+|   15 | harsh   |  NULL |
++------+---------+-------+
+8 rows in set (0.00 sec)
+
+mysql> update stu set marks=89 where rno = 15;
+Query OK, 1 row affected (0.11 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> select * from stu;
++------+---------+-------+
+| RNO  | NAME    | marks |
++------+---------+-------+
+|    4 | SAKSHAM |    99 |
+|    6 | DARSHIL |  NULL |
+|    8 | anuj    |  NULL |
+|    1 | ayush   |  NULL |
+|   18 | vivek   |  NULL |
+|    3 | aditya  |  NULL |
+|    9 | ankit   |  NULL |
+|   15 | harsh   |    89 |
++------+---------+-------+
+8 rows in set (0.00 sec)
+
+mysql> update stu set marks=75 where name='vivek';
+Query OK, 1 row affected (0.11 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> select * from stu;
++------+---------+-------+
+| RNO  | NAME    | marks |
++------+---------+-------+
+|    4 | SAKSHAM |    99 |
+|    6 | DARSHIL |  NULL |
+|    8 | anuj    |  NULL |
+|    1 | ayush   |  NULL |
+|   18 | vivek   |    75 |
+|    3 | aditya  |  NULL |
+|    9 | ankit   |  NULL |
+|   15 | harsh   |    89 |
++------+---------+-------+
+8 rows in set (0.00 sec)
+
+mysql> update stu set marks=66 where name='ayush';
+Query OK, 1 row affected (0.02 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> select * from stu;
++------+---------+-------+
+| RNO  | NAME    | marks |
++------+---------+-------+
+|    4 | SAKSHAM |    99 |
+|    6 | DARSHIL |  NULL |
+|    8 | anuj    |  NULL |
+|    1 | ayush   |    66 |
+|   18 | vivek   |    75 |
+|    3 | aditya  |  NULL |
+|    9 | ankit   |  NULL |
+|   15 | harsh   |    89 |
++------+---------+-------+
+8 rows in set (0.00 sec)
+
+mysql> update stu set marks=80 where marks is null;
+Query OK, 4 rows affected (0.11 sec)
+Rows matched: 4  Changed: 4  Warnings: 0
+
+mysql> select * from stu;
++------+---------+-------+
+| RNO  | NAME    | marks |
++------+---------+-------+
+|    4 | SAKSHAM |    99 |
+|    6 | DARSHIL |    80 |
+|    8 | anuj    |    80 |
+|    1 | ayush   |    66 |
+|   18 | vivek   |    75 |
+|    3 | aditya  |    80 |
+|    9 | ankit   |    80 |
+|   15 | harsh   |    89 |
++------+---------+-------+
+8 rows in set (0.00 sec)
+
+mysql> select * from stu order by marks;
++------+---------+-------+
+| RNO  | NAME    | marks |
++------+---------+-------+
+|    1 | ayush   |    66 |
+|   18 | vivek   |    75 |
+|    6 | DARSHIL |    80 |
+|    8 | anuj    |    80 |
+|    3 | aditya  |    80 |
+|    9 | ankit   |    80 |
+|   15 | harsh   |    89 |
+|    4 | SAKSHAM |    99 |
++------+---------+-------+
+8 rows in set (0.00 sec)
+
+mysql> select * from stu order by name
+    -> ;
++------+---------+-------+
+| RNO  | NAME    | marks |
++------+---------+-------+
+|    3 | aditya  |    80 |
+|    9 | ankit   |    80 |
+|    8 | anuj    |    80 |
+|    1 | ayush   |    66 |
+|    6 | DARSHIL |    80 |
+|   15 | harsh   |    89 |
+|    4 | SAKSHAM |    99 |
+|   18 | vivek   |    75 |
++------+---------+-------+
+8 rows in set (0.00 sec)
+
+mysql> select * from stu order by name desc;
++------+---------+-------+
+| RNO  | NAME    | marks |
++------+---------+-------+
+|   18 | vivek   |    75 |
+|    4 | SAKSHAM |    99 |
+|   15 | harsh   |    89 |
+|    6 | DARSHIL |    80 |
+|    1 | ayush   |    66 |
+|    8 | anuj    |    80 |
+|    9 | ankit   |    80 |
+|    3 | aditya  |    80 |
++------+---------+-------+
+8 rows in set (0.00 sec)
+
+mysql> select * from stu order by name asc;
++------+---------+-------+
+| RNO  | NAME    | marks |
++------+---------+-------+
+|    3 | aditya  |    80 |
+|    9 | ankit   |    80 |
+|    8 | anuj    |    80 |
+|    1 | ayush   |    66 |
+|    6 | DARSHIL |    80 |
+|   15 | harsh   |    89 |
+|    4 | SAKSHAM |    99 |
+|   18 | vivek   |    75 |
++------+---------+-------+
+8 rows in set (0.00 sec)
+
+mysql> alter table stu add sec char;
+Query OK, 8 rows affected (0.21 sec)
+Records: 8  Duplicates: 0  Warnings: 0
+
+mysql> ##column world after add is optional
+mysql> #sdfdsf
+mysql> #use # hash for comment in sql
+
+mysql> select min(marks) , max (marks), sum(marks), avg(marks), count(*), count(marks) from stu;
+ERROR 1630 (42000): FUNCTION db2.max does not exist. Check the 'Function Name Parsing and Resolution' section in the Reference Manual
+
+mysql> #space between function name and ( is not allowed 
+
+mysql> select min(marks) , max(marks), sum(marks), avg(marks), count(*), count(marks) from stu;
++------------+------------+------------+------------+----------+--------------+
+| min(marks) | max(marks) | sum(marks) | avg(marks) | count(*) | count(marks) |
++------------+------------+------------+------------+----------+--------------+
+|         66 |         99 |        649 |    81.1250 |        8 |            8 |
++------------+------------+------------+------------+----------+--------------+
+1 row in set (0.00 sec)
+
+
+mysql> #ie. max (marks) is invalid
+
+mysql> insert into stu values(14,'ashish',null);
+ERROR 1136 (21S01): Column count doesn't match value count at row 1
+
+
+#value count means attributes are 4 and values are 3 -- mismatch
+
+mysql> insert into stu values(14,'ashish',null,null);
+Query OK, 1 row affected (0.10 sec)
+
+mysql> select * from stu;
++------+---------+-------+------+
+| RNO  | NAME    | marks | sec  |
++------+---------+-------+------+
+|    4 | SAKSHAM |    99 | NULL |
+|    6 | DARSHIL |    80 | NULL |
+|    8 | anuj    |    80 | NULL |
+|    1 | ayush   |    66 | NULL |
+|   18 | vivek   |    75 | NULL |
+|    3 | aditya  |    80 | NULL |
+|    9 | ankit   |    80 | NULL |
+|   15 | harsh   |    89 | NULL |
+|   14 | ashish  |  NULL | NULL |
++------+---------+-------+------+
+9 rows in set (0.00 sec)
+
+mysql> select min(marks) , max(marks), sum(marks), avg(marks), count(*), count(marks) from stu;
++------------+------------+------------+------------+----------+--------------+
+| min(marks) | max(marks) | sum(marks) | avg(marks) | count(*) | count(marks) |
++------------+------------+------------+------------+----------+--------------+
+|         66 |         99 |        649 |    81.1250 |        9 |            8 |
++------------+------------+------------+------------+----------+--------------+
+1 row in set (0.00 sec)
+
+mysql> #now count(*) is 9 total no of records and count(marks) is 8 ie. not null data;
+mysql> notee
+mysql> selecttttttt
+    -> ;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'selecttttttt' at line 1
+mysql> notee
+mysql> tee b:\mysqlteaching.txt
+mysql> notee
+mysql> SELECT DATABASE();
++------------+
+| DATABASE() |
++------------+
+| NULL       |
++------------+
+1 row in set (0.00 sec)
+
+mysql> SHOW DATABASES;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| cyber_cafe         |
+| db1                |
+| db2                |
+| mysql              |
+| students           |
+| test               |
++--------------------+
+7 rows in set (0.03 sec)
+
+mysql> USE DB1;
+Database changed
+mysql> SHOW TABLES;
++---------------+
+| Tables_in_db1 |
++---------------+
+| stu           |
++---------------+
+1 row in set (0.12 sec)
+
+mysql> SELEC * FROM STU;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'SELEC * FROM STU' at line 1
+mysql> SELECT* FROM STU;
++------+---------+
+| RNO  | NAME    |
++------+---------+
+|    4 | SAKSHAM |
+|    6 | DARSHIL |
++------+---------+
+2 rows in set (0.06 sec)
+
+mysql> C/*/**
+   /*> ;
+   /*> /
+   /*> C
+   /*> mysql> ALTER STU ADD COLUMN SEC CHAR;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'STU ADD COLUMN SEC CHAR' at line 1

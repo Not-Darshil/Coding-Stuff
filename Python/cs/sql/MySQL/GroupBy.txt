@@ -1,0 +1,46 @@
+
+mysql> SELECT * FROM STUDENT;
++-----+---------+-------+---------+
+| rno | name    | marks | section |
++-----+---------+-------+---------+
+|   1 | Mohit   |    75 | A       |
+|   2 | Rohit   |    80 | B       |
+|   3 | Uday    |    80 | A       |
+|   4 | Rohan   |    85 | B       |
+|   5 | Aditya  |    87 | A       |
+|   6 | Sachin  |    75 | A       |
+|   7 | Shubham |    85 | A       |
++-----+---------+-------+---------+
+7 rows in set (0.00 sec)
+
+mysql> select * from student group by section ;
++-----+-------+-------+---------+
+| rno | name  | marks | section |
++-----+-------+-------+---------+
+|   1 | Mohit |    75 | A       |
+|   2 | Rohit |    80 | B       |
++-----+-------+-------+---------+         ## FIRST OCCURENCE OF THAT ELEMENT WITH THAT GROUP IS TREATED AS THE HEAD OF THAT FGROUP
+2 rows in set (0.00 sec)
+
+mysql> select * from student group by marks ;
++-----+--------+-------+---------+
+| rno | name   | marks | section |
++-----+--------+-------+---------+
+|   1 | Mohit  |    75 | A       |
+|   2 | Rohit  |    80 | B       |
+|   4 | Rohan  |    85 | B       |
+|   5 | Aditya |    87 | A       |
++-----+--------+-------+---------+
+4 rows in set (0.00 sec)
+
+mysql> select count(*),marks from student group by marks ;
++----------+-------+
+| count(*) | marks |
++----------+-------+
+|        2 |    75 |
+|        2 |    80 |
+|        2 |    85 |
+|        1 |    87 |
++----------+-------+
+4 rows in set (0.00 sec)                     ## THE MARKS ARE ARRANGED AND COUNTED (and dispayed)
+

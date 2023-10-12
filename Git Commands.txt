@@ -1,0 +1,15 @@
+git add.
+git status {optional}
+git commit -m "message"
+git push
+
+
+
+
+
+
+git init
+git status
+git commit -m "first commit"
+git remote add origin https://github.com/Not-Darshil/Coding-Stuff.git
+git push -u origin master

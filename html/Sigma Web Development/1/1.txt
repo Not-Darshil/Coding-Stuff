@@ -1,0 +1,11 @@
+* Installation of VS CODE
+* vs code vs html
+* learnt !:creates a html template
+* Recommended Extensions 
+* Client , Server , Browser
+* What is Front End and Backend
+* learn html :80%,css:40-60%,js:50-70%
+* 
+
+
+

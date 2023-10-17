@@ -1,0 +1,8 @@
+CSS SELECTORS:
+ELEMENT SELECTOR{
+    DISADVANTAGE:ALL ELEMENTS OF THAT SELECTORS ARE CHOOSED
+}
+child SELECTOR:direct hona chahiye indirect child nahi
+
+
+but agr descendants selector use krenge to any how change hoga

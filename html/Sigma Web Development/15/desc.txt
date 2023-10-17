@@ -1,0 +1,4 @@
+1)Inline CSS:less
+
+2)Internal CSS:halki fuli website and halki edit krni halki h
+3)External CSS

@@ -39,11 +39,7 @@ void main(){
     printf("\n");   
     for (k=0; k<=n+m-1; k++)
     {
-        printf("%d ",C[k]);
-        printf("\n");
+        printf("%d \n",C[k]);
+
     }
 }
-
-
-
-

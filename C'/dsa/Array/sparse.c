@@ -14,7 +14,7 @@ int main(){
     {
         for (j=0;j<3;j++)
         {
-            printf("%d",A[i][j]);
+            printf("%d ",A[i][j]);
         }
         printf("\n");
     }

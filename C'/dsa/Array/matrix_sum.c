@@ -36,7 +36,7 @@
     
 // }
 
-//WAP TO PRINT THE SUM OF LOWER TRIANGULAR MATRIX
+//program 2b:WAP TO PRINT THE SUM OF LOWER TRIANGULAR MATRIX
 // #include<stdio.h>
 // void main()
 // {

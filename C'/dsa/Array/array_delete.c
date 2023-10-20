@@ -1,5 +1,5 @@
 //ON BASES OF INDEX
-/*
+// /*
 
 #include<stdio.h>
 void main()
@@ -9,6 +9,7 @@ printf("enter number of elements:");
 scanf("%d",&n);
 for(i=0;i<n;i++)
 {
+    printf("Enter element:");
 scanf("%d",&A[i]);
 }
 printf("enter index to be deleted at:");
@@ -23,10 +24,10 @@ for(i=0;i<n-1;i++)
 printf("%d \n",A[i]);
 }
 }
-*/
+// */
 
 //ON BASES OF ELEMENT
-// /*
+/*
 
 #include<stdio.h>
 void main()
@@ -57,7 +58,7 @@ for(i=0;i<new_num;i++)
 printf("%d \n",A[i]);
 }
 }
-// */
+*/
 
 
 

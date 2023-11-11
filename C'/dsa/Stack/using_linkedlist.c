@@ -8,7 +8,7 @@ struct node
 };
 void main()
 {
-    int ch;
+    int ch,poped;
     struct node * top = NULL,*p;
     do
     {
@@ -40,9 +40,10 @@ void main()
                 }
                 else{
                     p=top;
-                    top=top->next;
+                    top=top->next;//top=null agr last element h to
+                    poped=p->data;
                     free(p);
-                    printf("POPPED\n");
+                    printf("POPPED\n %d",poped);
                 }      
                 break;
             case 3: if (top==NULL)

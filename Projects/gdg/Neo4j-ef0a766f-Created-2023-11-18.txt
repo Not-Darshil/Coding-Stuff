@@ -1,0 +1,14 @@
+# Wait 60 seconds before connecting using these details, or login to https://console.neo4j.io to validate the Aura Instance is available
+NEO4J_URI=neo4j+s://ef0a766f.databases.neo4j.io
+NEO4J_USERNAME=neo4j
+NEO4J_PASSWORD=opQ8Pv7495atMInwA6hPojSpcvQ-p9tEizOFtKhnXV0
+AURA_INSTANCEID=ef0a766f
+AURA_INSTANCENAME=Instance01
+
+
+
+MAKERSUITE API:
+AIzaSyAzIYNOVqdtd1PODEswBjHNZWUpxiZ1NcQ
+
+OPEN AI API:
+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

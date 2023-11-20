@@ -18,7 +18,7 @@ int main(){
         }
         printf("\n");
     }
-        for (i=0;i<3;i++)
+    for (i=0;i<3;i++)
     {
         for (j=0;j<3;j++)
         {
@@ -27,24 +27,22 @@ int main(){
         }
     }
     printf("cnt = %d",cnt);
-    int B[3][cnt];
-
-
+    int B[cnt][3];
     for (i=0;i<3;i++){
         for (j=0;j<3;j++)
         { if (A[i][j] != 0)
-            {
-                B[0][k]=i;
-                B[1][k]=j;
-                B[2][k]=A[i][j];
+            {               
+                B[k][0]=i;
+                B[k][1]=j;
+                B[k][2]=A[i][j];
                 k++;
             }
         }
         printf("\n");
     }
     printf("Sparse Marix:\n");
-    for (i=0;i<3;i++){
-        for (j=0;j<cnt;j++){
+    for (i=0;i<cnt;i++){
+        for (j=0;j<3;j++){
             printf(" %d ",B[i][j]); 
         }
         printf("\n");

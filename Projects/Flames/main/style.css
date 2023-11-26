@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.heading {
+    width: 100%;
+    height: 100vh;
+    /* background-image: linear-gradient(rgb(0,0,0),rgb(255, 255, 255)); */
+    background-image: linear-gradient(rgb(255, 137, 137), rgba(255, 234, 221, 0.507));
+    position: relative;
+    padding: 05%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 0;
+}
+
+
+
+.backvideo {
+    position: absolute;
+    right: 0rem;
+    bottom: 0rem;
+    z-index: -1;
+}
+
+@media(min-aspect-ratio: 16/9) {
+    .backvideo {
+        width: 100%;
+        height: auto;
+    }
+
+@media(max-aspect-ratio: 16/9) {
+    .backvideo {
+        width: auto;
+        height: max;
+    }
+
+}
+
+nav {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 20px 8%;
+    display: flex;
+    align-items: center;
+    /* flex-direction: row; */
+    justify-content: space-between;
+
+
+}
+
+nav .logo {
+    width: 5rem;
+    height: 5rem;
+}
+
+nav ul li {
+    list-style: none;
+    /* display:inline-block; */
+    display: contents;
+    margin-left: 40rem;
+    font-weight: 900;
+}
+
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.25rem;
+    margin: 0.75rem;
+}
+
+.content {
+    text-align:end;
+    margin-bottom: 30rem;
+    font-size: 2rem;
+    position: absolute;
+}
+
+.content h1 {
+    color: white;
+    font-weight: 900;
+}

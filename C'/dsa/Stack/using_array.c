@@ -1,12 +1,9 @@
-// Using ARRay
 #include<stdio.h>
-// # define size 10;
 void main()
 {
     int ch,ele,del,top=-1,i,size=10;
     int stack[size];
-    do
-    {
+    while(1){
         printf("\n 1:PUSH \n 2:POP \n 3:DISPLAY \n 4:EXIT\n");
         printf("Enter Choice[1,2,3,4]:");
         scanf("%d",&ch);    
@@ -49,10 +46,9 @@ void main()
                 {
                     printf("EXITED\n");
                     break;
+
                 }
             default: printf("unknown\n");
         }    
     }
-    while(ch != 4);
-
 }

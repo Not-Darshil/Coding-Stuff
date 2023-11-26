@@ -42,18 +42,19 @@ void main()
             }
             Q=P->next;
             free(Q);
+            P->next=NULL;
             break;
-    // case 3: printf("Enter Position: ");
-    //         scanf("%d",&pos);
-    //         now=0;
-    //         while(now<pos){
-    //             P=P->next;
-    //             now++;
-    //         }
-    //         Q=P->next;
-    //         P->next=Q->next;
-    //         free(Q);
-    //         break;
+    case 3: printf("Enter Position: ");
+            scanf("%d",&pos);
+            now=0;
+            while(now<pos-1){
+                P=P->next;
+                now++;
+            }
+            Q=P->next;
+            P->next=Q->next;
+            free(Q);
+            break;
     default: printf("wrong choice");
     }
     P=head;

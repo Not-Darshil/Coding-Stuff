@@ -1,6 +1,4 @@
-const prompt = require("prompt-sync")();
-
-
+// const prompt = require("prompt-sync")();
 const percent_calculator = function(result_array)
 {
     let len = result_array.length;
@@ -47,7 +45,7 @@ const percent_calculator = function(result_array)
 
 const result_maker = function(first,third)
 {
-    
+    console.log(first);
     let second="LOVES";
     let whole=(first.toUpperCase())+second+(third.toUpperCase());
     console.log(whole);
@@ -70,10 +68,18 @@ const result_maker = function(first,third)
 
     }
     console.log(result);
-    return percent_calculator(result)
+    output.innerHTML=percent_calculator(result)
+    // return percent_calculator(result)
 }
 
-let f=prompt("Enter His Name:");
-let t=prompt("Enter Her Name:");
-let final_result=result_maker(f,t);   
-console.log(final_result); 
+
+const first_input=document.getElementById("101");
+const third_input=document.getElementById("102");
+const output=document.getElementById("301");
+const button = document.getElementById("201");
+button.addEventListener('click', function() {
+    result_maker(first_input.value, third_input.value);
+});
+// output.innerHTML=result_maker(first_input,third_input); 
+
+

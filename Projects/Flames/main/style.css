@@ -110,24 +110,55 @@ nav ul li a:hover{
     height:3rem;
     width:20rem;
     font-family:'Poppins', sans-serif;
-    font-weight: 900;
+    font-weight: 600;
+    /* color: white; */
     text-align: center;
     font-size: 1rem;
     -ms-flex-align: center;
+    border:none;
+    box-shadow: 2px 4px 6px black;
+    text-transform: uppercase;
+    
+}
+
+.button{
+    text-transform: uppercase;
+    height: 3rem;
+    width:12rem;
+    margin-left: 25rem;
+    margin-top:5rem;
+    font-family:'Poppins', sans-serif;
+    font-weight: 600;
+    background-color: rgb(252, 174, 174);
+    border-radius: 7.25rem;
+    border:none;
+    box-shadow: 2px 4px 6px black;
+    text-transform: uppercase;
+    border-color: rgb(255, 234, 221);
+
 }
 
 .central_heart{
     height: 20rem;
-    margin-bottom: 8rem;
-    margin-right: 2rem;
-    /* justify-items: center; */
+    left:30rem;
+    top: 150rem;
+    /* margin-bottom: -1rem;
+    margin-right: 2rem; */
+    justify-items: center;
+    transform: ;
 }
 
 .result{
     z-index: 2;
+    left:28rem;
+    top: 11rem;
+    color: rgb(255, 234, 221);
     font-size: 5rem;
+    position: relative;
+    justify-content: center;
+    /* mask-position: 2rem; */
 }
-#301{
+#res{
     z-index: 5;
     font-size: 8rem;
     font-weight: 900;

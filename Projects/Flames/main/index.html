@@ -28,14 +28,14 @@
         <div class="content">
             <h1>Calculate Your Love</h1>
         </div>
-        <div class="main-body">
-        <input type="text" class="name" id="101" placeholder="Enter Your Name" autocomplete="off" maxlength="15" required>
-        <img src="images/heart.png" class="central_heart">
-        <input type="text" class="name" id="102" placeholder="Enter Your Partner Name" autocomplete="off" maxlength="15" required>
-        </div>
+        <br>
         <div>
-            <input type="button" class="calculate-btn" id="201" value="Calculate Flames"></input>
-            <p class="result" id="301">FG</p>
+            <p class="result" id="result"></p>
+            <input type="text" class="name" id="yourName" placeholder="Enter Your Name" autocomplete="off" maxlength="15" required>
+            <img src="images/central_heart.png" class="central_heart">
+            <input type="text" class="name" id="partnerName" placeholder="Enter Your Partner Name" autocomplete="off" maxlength="15" required>
+            <br>
+            <button type="submit" id="sub" class="button" onclick="button_press()" >Calculate Your Love</button>
         </div>
     </div>
 

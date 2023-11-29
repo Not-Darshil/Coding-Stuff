@@ -1,4 +1,3 @@
-// const prompt = require("prompt-sync")();
 const percent_calculator = function(result_array)
 {
     let len = result_array.length;
@@ -34,7 +33,6 @@ const percent_calculator = function(result_array)
             {
                 intermediate_array.push(result_array[half]);
             }
-            console.log(intermediate_array);
             return percent_calculator(intermediate_array);
 
         }
@@ -45,10 +43,9 @@ const percent_calculator = function(result_array)
 
 const result_maker = function(first,third)
 {
-    console.log(first);
     let second="LOVES";
     let whole=(first.toUpperCase())+second+(third.toUpperCase());
-    console.log(whole);
+    console.log("whole"+whole);
     let result=[];
     while(whole.length>0)
     {
@@ -60,26 +57,25 @@ const result_maker = function(first,third)
             {
                 cnt=cnt+1;
                 whole=(whole.slice(0,i))+(whole.slice(i+1));//BEST EXCEPT FOR LL OR REPEATION OF ALPHABETS IN ANY NAME OR ENFING WITH L OR STARTING WITH S
-                // console.log("KEY:"+key+" WHOLE:"+whole);
             }
         }
-        // console.log("net:"+key+cnt+"\n");   
         result.push(cnt);  
-
     }
-    console.log(result);
-    output.innerHTML=percent_calculator(result)
-    // return percent_calculator(result)
+    return percent_calculator(result);
 }
 
-
-const first_input=document.getElementById("101");
-const third_input=document.getElementById("102");
-const output=document.getElementById("301");
-const button = document.getElementById("201");
-button.addEventListener('click', function() {
-    result_maker(first_input.value, third_input.value);
-});
-// output.innerHTML=result_maker(first_input,third_input); 
-
+function button_press() 
+{
+    console.log("in calculateLove");
+    var yourName = document.getElementById('yourName').value.trim();
+    var partnerName = document.getElementById('partnerName').value.trim();
+    if (yourName === "" || partnerName === "") {
+        alert("Please enter both names.");
+        return;
+    }
+    console.log(yourName);
+    const output_result=result_maker(yourName, partnerName);  
+    console.log("OUTPUT:"+output_result);     
+    document.getElementById('result').innerText = output_result;
+}
 

@@ -9,49 +9,49 @@ struct node
 void main()
 {
     int ch,poped;
-    struct node * top = NULL,*P;
+    struct node * top = NULL,*head,*P;
     do
     {
-        printf(" 1:PUSH \n 2:POP \n 3:DISPLAY \n 4:EXIT\n");
+        printf(" 1:ENQUEUE \n 2:DEQUEUE \n 3:DISPLAY \n 4:EXIT\n");
         printf("Enter Choice[1,2,3,4]:");
         scanf("%d",&ch);    
         switch (ch)
         {
-            case 1: if (top==NULL)
+            case 1: if (head==NULL)
                 {
+                    head=(struct node *)malloc(sizeof(struct node));
+                    printf("Enter Data:");
+                    scanf("%d",&head->data);
+                    head->next=NULL;
+                    top=head;
+                }
+                else{
                     P=(struct node *)malloc(sizeof(struct node));
                     printf("Enter Data:");
                     scanf("%d",&P->data);
                     P->next=NULL;
-                    top=P;
-                }
-                else{
-                    P=(struct node *)malloc(sizeof(struct node));
-                    printf("Enter Data:");
-                    scanf("%d",&P->data);
-                    P->next=top;
+                    top->next=P;
                     top=P;                 
-
                 }
                 break;
-            case 2: if (top==NULL)
+            case 2: if (head==NULL)
                 {
                     printf("UNDERFLOW \n");
                 }
                 else{
-                    P=top;
-                    top=top->next;//top=null agr last element h to
+                    P=head;
+                    head=head->next;//head=null agr last element h to
                     poped=P->data;
                     free(P);
-                    printf("POPPED %d",poped);
+                    printf("DEQUEUED %d \n",poped);
                 }      
                 break;
-            case 3: if (top==NULL)
+            case 3: if (head==NULL)
                 {
-                    printf("EMPTY STACK\n");
+                    printf("EMPTY QUEUE\n");
                 }
                 else{
-                    P=top;
+                    P=head;
                     while(P!=NULL)
                         {
                             printf("%d \n", P->data);

@@ -22,14 +22,15 @@ void main()
                     front=(struct node *)malloc(sizeof(struct node));
                     printf("Enter Data:");
                     scanf("%d",&front->data);
-                    front->next=NULL;
+                    front->next=front;
                     rear=front;
                 }
-                else{
+                else
+                {
                     P=(struct node *)malloc(sizeof(struct node));
                     printf("Enter Data:");
                     scanf("%d",&P->data);
-                    P->next=NULL;
+                    P->next=front;
                     rear->next=P;
                     rear=P;                 
                 }
@@ -38,9 +39,14 @@ void main()
                 {
                     printf("UNDERFLOW \n");
                 }
-                else{
+                else
+                {
                     P=front;
-                    front=front->next;//front=null agr last element h to
+                    front=front->next;//front=front agr last element h to
+                    if (front==P)//Becuase if there is a last elemetnt in circ. queue then front-next is front itself therefore removing a last element should make the front A NULL value
+                    {
+                        front=NULL;
+                    }
                     poped=P->data;
                     free(P);
                     printf("DEQUEUED %d \n",poped);
@@ -52,15 +58,16 @@ void main()
                 }
                 else{
                     P=front;
-                    while(P!=NULL)
-                        {
-                            printf("%d \n", P->data);
-                            P=P->next;
-                        }
+                    do
+                    {
+                        printf("%d \n", P->data);
+                        P=P->next;
+                    }
+                    while(P!=rear->next);
                     printf("\n");
                 }
                 break;
-            case 4:
+            case 4: 
                 {
                     printf("EXITED\n");
                     break;

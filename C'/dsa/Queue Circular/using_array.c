@@ -1,7 +1,7 @@
 #include<stdio.h>
 void main()
 {
-    int ch=0,data,del,rear=-1,i,size=10;
+    int ch=0,data,del,front=-1,rear=-1,i,size=10;
     int queue[size];
     while(ch!=4){
         printf(" 1:ENQUEUE \n 2:DEQUEUE \n 3:DISPLAY \n 4:EXIT\n");
@@ -14,6 +14,10 @@ void main()
                     printf("OVERFLOW\n");
                 }
                 else{
+                    if (front==-1)
+                    {
+                        front=0;
+                    }
                     printf("Enter Data:");
                     scanf("%d",&data);
                     rear++;                

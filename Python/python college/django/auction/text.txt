@@ -1,3 +1,4 @@
+py django-admin startproject
 py manage.py runserver
 py manage.py startapp home : used to create a new app 
 py manage.py makemigrations : create changes and store in a file or used to see any changes or not 

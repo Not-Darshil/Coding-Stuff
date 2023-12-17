@@ -1,5 +1,4 @@
 #include<stdio.h>
-#include<conio.h>
 void TOH(int,char,char,char);
 void main()
 {

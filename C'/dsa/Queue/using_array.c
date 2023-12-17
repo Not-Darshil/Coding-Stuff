@@ -27,10 +27,6 @@ void main()
                 }
                 else{
                     del=queue[0];
-                    if(rear==0)
-                    {
-                        front=-1;
-                    }
                     for (i=0;i<rear;i++)
                     {
                         queue[i]=queue[i+1];

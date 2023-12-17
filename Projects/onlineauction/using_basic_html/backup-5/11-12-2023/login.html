@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="css/form.css">
+    <script>
+        // Get the "Go" button element
+        const goButton = document.getElementById("login_button");
+
+        // Add a click event listener to the "Go" button
+        goButton.addEventListener("click", redirectToSelectedWebsite);
+
+        // Function to redirect to the selected website
+        function redirectToSelectedWebsite() {
+            // Get the select element by its id
+            const selectElement = document.getElementById("usertype");
+
+            // Get the selected option's value
+            const selectedValue = selectElement.value;
+
+            // Redirect the user to the selected URL
+            window.location.href = selectedValue;
+        }
+    </script>
+    <!-- DESIGNER SELECTION BOX -->
+    <title>Styled Select Box</title>
+  <style>
+    /* Style for the select box */
+    .styled-select select {
+      width: 80%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      position: relative;
+      left: 40px;
+      color: black;
+      
+      background-color: rgba(255,255,255,0.3);
+      
+    }
+
+  </style>
+</head>
+
+
+<body>
+
+    <div class="alert-box">
+        <p class="alert"></p>
+    </div>
+
+    <div class="form">
+        <h1 class="heading">login</h1>
+            <div class="styled-select">
+                <select id="usertype" name="usertype">
+                    <option value="">Select a user type:</option>
+                     <option value="adm_Dashboard.html">Admin</option>
+                     <option value="seller_Dashboard.html">Seller</option>
+                     <option value="bidder_browse.html">Bidder</option>
+                 </select>
+            </div>   
+        <input type="email" placeholder="email" autocomplete="off" class="email" required>
+        <input type="password" placeholder="password" autocomplete="off" class="password" required>
+        <button class="submit-btn" onclick="redirectToSelectedWebsite()" id="login_button">log in</button>
+        <a href=register.html class="link">don't have an account? Register one</a>
+    </div>
+
+    <script src="js/form.js"></script>
+
+</body>
+
+</html>

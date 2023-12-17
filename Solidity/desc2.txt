@@ -1,0 +1,13 @@
+mainnet vs test net
+main net : network of real ether value
+test net : test net of fake ether value(for testing small contracts and decentralized)
+
+mainnet network values-1
+testnet network value-3,4,42
+
+eg:rinkeby test network,ropsten
+
+
+metamask: crypto wallet
+store,send,send, ether ,run dapps,swap tokens
+

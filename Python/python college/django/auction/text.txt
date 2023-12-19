@@ -1,3 +1,8 @@
+LINK: https://www.youtube.com/watch?v=JxzZxdht-XY
+Code with harry one shot of django tutorial
+Reasons for not using HTML,CSS or JavaScript instead of Django
+
+django-admin startproject First
 py django-admin startproject
 py manage.py runserver
 py manage.py startapp home : used to create a new app 

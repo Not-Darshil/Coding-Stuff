@@ -1,0 +1,25 @@
+import turtle
+t=turtle.Turtle()
+wn=turtle.Screen()
+
+wn.bgcolor("cyan")
+t.up()
+def baloon(x,y):
+    t.up()
+    t.goto(x,y)
+    t.down()
+    t.begin_fill()
+    t.circle(75)
+    
+    t.fillcolor("yellow")
+    t.end_fill()
+    t.begin_fill()
+    t.right(60)
+    t.fd(25)
+    t.right(120)
+    t.fd(25)
+    t.right(120)
+    t.fd(25)
+    t.fillcolor("red")
+    t.end_fill()
+baloon(-100,100)

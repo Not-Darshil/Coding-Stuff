@@ -1,0 +1,53 @@
+Units:
+    -px (constant)
+    -% (relative to parent)
+        if we change the parent dimensions then the child dimensions would also change
+
+    -vw,vh (screen perspective)
+        viewport width and height
+        if we change the parent dimensions then the child dimensions would also change
+        ek time aata h jb bhot chota hojata h
+
+    -vmax,vmin(viewport max and min)
+        ya basically phle hieght and width me so jo max/minimum hoga uske acc lega fir agr change krte rhoge to hota rhega
+
+    -em,rem(constant acc to parent)
+        it means ki parent ka multiple
+
+
+
+Layout of website
+    -absolute vs flex?
+        absolute bare minimum use krna h
+        flex wrap: wrap
+
+Flexbox
+    -Display Flex
+    -aligning items in x and y axis
+    -flex-direction
+    -flex-wrap
+
+CSS Media Queries
+    600px and 992 px are 'typical breakpoint'
+    
+@media (max-width:600px) {
+    .perc{
+        background-color: red;
+    }
+}
+
+
+
+KEY PONTS
+1.CSS FLEXBOX
+2.CSS Units
+3.Responsive Typography
+4. Mobile First Approach
+5. Flexible Images and Medias
+
+Practice and Practice
+
+
+display none for navbar
+calc function for 
+line hiegh

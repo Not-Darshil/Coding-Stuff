@@ -1,0 +1,12 @@
+FORM TAG
+get request 
+post request
+
+textarea box
+
+there are many labelrs like a radio button
+
+for more:
+https://www.codewithharry.com/tutorial/html-input-types/
+
+https://www.codewithharry.com/tutorial/more-on-forms/

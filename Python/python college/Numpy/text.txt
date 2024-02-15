@@ -1,0 +1,38 @@
+"""
+so i just watched the lectures of numpy and want to do some practice.
+
+Give me Some Questions 5 Basics,5 Intermediate 5 advanced level regarding the numpy 
+
+also in advanced level give some hints but not the exact solution.
+"""
+
+
+
+
+Sure! Here are some numpy practice questions categorized into Basics, Intermediate, and Advanced levels:
+
+**Basics:**
+
+1. Create a numpy array of zeros of shape (3, 4).
+2. Create a numpy array of ones of shape (2, 3).
+3. Create a numpy array of shape (3, 3) with random integers ranging from 1 to 10.
+4. Create a numpy array containing the numbers 1 to 10.
+5. Reshape the array from question 4 into a shape of (2, 5).
+
+**Intermediate:**
+
+6. Create a 5x5 identity matrix using numpy.
+7. Given two numpy arrays `arr1 = np.array([1, 2, 3])` and `arr2 = np.array([4, 5, 6])`, concatenate them horizontally.
+8. Given a numpy array `arr = np.array([1, 2, 3, 4, 5])`, reverse the array.
+9. Create a numpy array with 10 equally spaced values between 0 and 1.
+10. Given a numpy array `arr = np.array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])`, extract all odd numbers from the array.
+
+**Advanced (with hints):**
+
+11. Given a numpy array `arr = np.array([1, 2, 3, 4, 5])`, compute the square of each element without using loops. (Hint: Look into numpy's vectorized operations.)
+12. Create a 2D numpy array of shape (5, 7) with 1's on the diagonal and 0's elsewhere. (Hint: Consider using numpy's `diag` function.)
+13. Given a numpy array `arr = np.array([1, 2, 3, 4, 5])`, calculate the cumulative sum of elements. (Hint: Look into numpy's `cumsum` function.)
+14. Given a 2D numpy array `arr`, swap its rows such that the first row becomes the last row and vice versa. (Hint: Think about slicing.)
+15. Implement the dot product of two numpy arrays without using numpy's built-in dot function. (Hint: Recall the definition of the dot product and how it can be computed using element-wise multiplication and summing.)
+
+These questions should give you a good range of practice with numpy! Let me know if you need more explanation or hints for any of them.

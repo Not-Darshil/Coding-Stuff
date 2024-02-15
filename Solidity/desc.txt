@@ -1,0 +1,20 @@
+https://www.youtube.com/watch?v=gsaapL1SEqg&list=PLgPmWS2dQHW9u6IXZq5t5GMQTpW7JL33i&index=1
+
+
+
+
+bytcode to opcode
+
+Contract bytecode is public in readable form.
+
+Contract doesn't have to be public.
+
+Bytecode is immutable.
+
+ABI act as a bridge between applications and smart contract.
+
+ABI and Bytecode cannot be generated without source code.
+
+generation of abi and bytecode to contract source is techinally possible but practically impossible.
+
+whereeas vice verca is possible 

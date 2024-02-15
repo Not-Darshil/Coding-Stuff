@@ -1,0 +1,16 @@
+
+/* Class */
+.red{
+    color: red;
+}
+.bg-yellow {
+    background-color: yellow;
+}
+
+/* ID's */
+#101{
+    font-style: italic; 
+}
+#102{
+    font-style: bold; 
+}

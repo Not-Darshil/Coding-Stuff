@@ -1,0 +1,52 @@
+import turtle
+t=turtle.Turtle()
+wn=turtle.Screen()
+wn.bgcolor("light blue")
+def alH():
+    t.speed(0)
+    t.up()
+    t.goto(-375,300)
+    t.left(270)
+    t.down()
+    t.begin_fill()
+    t.goto(-375,100)
+    t.left(90)
+    t.fd(50)
+    t.goto(-325,175)
+    t.fd(50)
+    t.right(90)
+    t.fd(75)
+##  position=(-275,100)
+    t.goto(-225,100)
+    t.goto(-225,300)
+    t.right(90)
+    t.fd(50)
+    t.goto(-275,225)
+    t.fd(50)
+    t.right(90)
+    t.fd(75)
+    t.left(90)
+    t.fd(50)
+    t.color("black")
+    t.fillcolor("yellow")
+    t.end_fill()
+def alA(x,y):
+    t.speed(1)
+    t.up()
+    t.goto(x,y)
+    t.down()
+    t.right(100)
+    t.fd(190)
+    t.right(120)
+    t.fd(190)
+    t.right(80)
+    t.fd(50)
+    
+    
+    
+    
+    
+alH()
+alA(0,0)
+
+##alA(-350,350)

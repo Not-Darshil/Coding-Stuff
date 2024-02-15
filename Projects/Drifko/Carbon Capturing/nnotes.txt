@@ -1,0 +1,35 @@
+thermo generatr 
+carbon capture 
+verdox
+cost structure 
+revenue
+
+1.cost structure 
+2.govt. policies
+3.revenue model
+4.execution plan
+
+mills 
+
+
+reuse CO2
+
+The team focuses on the methodology and design of materials targeted to scalable and efficient conversion of waste CO2 emitted from coal and natural gas power generation to methanol and other value added products.
+
+The CO2 reduction process also requires H2, the generation of which is another major challenge.
+
+
+
+Pressure Swing Adsorption (PSA) is a cyclic adsorption process, which allows continuous separation of gas streams.
+ four steps: pressurization, feed, blowdown and purge
+ maximum pressure of 6 bar
+
+
+
+
+
+
+
+
+
+

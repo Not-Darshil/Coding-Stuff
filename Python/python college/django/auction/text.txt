@@ -1,0 +1,95 @@
+py manage.py runserver
+py manage.py startapp home : used to create a new app 
+py manage.py makemigrations : create changes and store in a file or used to see any changes or not 
+py manage.py migrate : apply the pending changes created by makemigrations or used to make default table in sql schema
+py manage.py createsuperuser: for making id and password admins
+py manage.py shell
+
+
+# return HttpResponse("This is Home page")
+return render(request, 'index.html')
+
+{{variable}}
+context={
+    'variable':"This is Home page"
+}
+return render(request, 'index.html',context)
+
+
+getbootstrap
+light-> dark
+
+default authentication system
+::to create a super user
+:: how to change django administration task search and add the 3 lines in url.py
+:: adding css in admin panel is optional
+
+
+TEMPLATE INHERITHANCE SYSTEM
+::BLock bnta h body nam ka
+:: extends mtlb ki yeh iss base.html (header and footer) ko aage extend and changes krega
+:: index.html(extend to base.html and block)->> base.html(block)
+:: ab jo index me kra h vo services , aboutus, contact us ... me kr skte h
+
+source unsplash
+container fluid
+
+BASIC html
+
+FORM SUBMIT
+::method="post" aciton="/contact"
+:: csrf token
+
+
+SETTING UP SQL DATABASE
+::creating a model:defines your DATABASE
+:::in model.py
+:::class Contact(models.Model):
+::: 
+name =  models.CharField(max_Length=122)
+email = models.CharField(max_Length=122)
+phone = models.CharField(max_Length=12)
+desc = models.TextField()
+u can also define a function(def __str__(self) named) to return self.name
+
+::: makemigrations 
+::: in admins.py write theese lines to make the adjustments
+from home.models import Contact
+admin.site.register(Contact)
+
+::: from app.py copy the name of class HomeConfig to the setting.py->>installed apps as home.apps.HomeConfig
+:::apps aur model register krke migrate kroge to table ka structure bn jaega
+
+FORM SUBMIT BACKEND:
+:::if request.method == 'POST':
+name=request.POST.get( ' name')//do same for email,phone,desc
+and import the Contact model from home.models
+and create a object for the contact and assign all the values to it,syntax like function
+aur fir contact.save()
+aur fir messages.success(request,"done h ji")
+aur fir nav ke bar in dismissng alert bootstap use krenge in base.html
+
+
+DJANGO MESSAGES FRAMEWORK:
+search and add the 3 lines to settings.py ... there are 5 tags in it 
+
+
+SHELL 
+python contact.objects.filter()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

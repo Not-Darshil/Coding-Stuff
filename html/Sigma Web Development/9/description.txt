@@ -1,0 +1,6 @@
+* ID AND CLASSES
+* ID is just like a aadhzar card, uniques for each tag, however classes is like humans (male and female) so many tags can have same class, one element can have multiple classes and
+* IN CSS . means class and # means ID
+* # is also useful in linking 
+* agr aap kisi link ke aage # lagake id likh doge to usi id ko dikhayega us page me
+* just like in a webpage specific portion of the page can be targeted using the id

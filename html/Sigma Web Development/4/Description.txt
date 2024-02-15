@@ -1,0 +1,5 @@
+* Bookmark Website
+* Anchor tags related
+* For Dummy Text we can use Lorem23 abbreviations and which generate 23 words of text 
+* In html we can use attributes such as lang in html tag or the style attributes or the rel and href in link tag of css
+*anchor tags

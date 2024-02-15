@@ -1,0 +1,13 @@
+* images using the img tag
+* alt attribute in img tag , is used for in case the image is not visible in any circumstances then the value of alt attribute and a logo of image will be displayed
+* width and height are in pixels, no need of px in html whereaas required in css,if onlyone is provided then the other will be set automatically to keep the ratio same
+* 
+
+* Table TAG
+* TH:TABLE HEADER
+*TD:TABLE DATA
+* Colspan and rowspan are just Merge and centre in HTML just like EXCEL
+* aayein thoda km smj aaya but okay 
+
+
+* LISTS : ORDERED , UNORDERED ,DEFINITION LIST:(ul,ol,li,dl,dt,dd)

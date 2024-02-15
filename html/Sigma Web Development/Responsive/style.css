@@ -1,0 +1,21 @@
+html,body{
+    margin: 0;
+    height: 100%;
+    width: 20px;
+    background-color: blanchedalmond;
+}
+
+
+.perc{
+    border: 2px solid black;
+    color:white;
+    background-color: rgb(195, 195, 246);
+    width:50em;
+    height: 50%;
+}
+
+@media (max-width:600px) {
+    .perc{
+        background-color: red;
+    }
+}

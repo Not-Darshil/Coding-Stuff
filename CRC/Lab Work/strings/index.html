@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sum Upto n no.s</title>
+</head>
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+    }
+    center{
+      display: flex;
+        background: rgb(184, 184, 184);
+        height: 100vh;
+        align-items: center;
+        justify-content: center;
+    }
+    .container{
+        
+        height: 80vh;
+        border-radius: 10px;
+        box-shadow: 4px 6px 8px black;
+        background: whitesmoke;
+        width: 60vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        
+        gap: 5px;
+    }
+    button,input{
+        padding: 10px 20px 10px 20px;
+        text-transform: uppercase;
+        border-radius: 8px;
+        border: none;
+        color: white;
+        background-color: rgb(184, 184, 184);
+        font-weight: 700;
+    }
+
+</style>
+<body>
+   <center>
+
+   
+       <div class="container">
+        <h2>Enter Space separated numbers for sum</h2>
+        <input type="text" min="0" id="t1">
+        <button type="text" onclick="sum()">Calculate Result</button>
+        <h4 id="t2"></h4>
+    </div>
+</center>
+    <script>
+        function sum(){
+            let t1=document.querySelector("#t1").value;
+            let t2=document.querySelector("#t2");
+            let arr=t1.split(" ");
+            let res=0;
+            for(let i=0;i<arr.length;i++){
+                res+=Number(arr[i]);
+            }
+            t2.innerHTML = res;
+        }
+    </script>
+</body>
+</html>

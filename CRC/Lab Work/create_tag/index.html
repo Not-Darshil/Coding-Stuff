@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="add()">Click Me</button>
+    <div id="main">
+
+    </div>
+    <script>
+        function add(){
+            p = document.createElement("p");
+            p.innerHTML = "lorem Ips   et dolor sit amet";
+            p.setAttribute("style","border :2px solid black");
+            document.getElementById("main").appendChild(p);
+        }
+    </script>
+</body>
+</html>

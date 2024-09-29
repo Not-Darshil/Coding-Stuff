@@ -1,0 +1,144 @@
+*{
+
+}
+
+:root {
+    --orange:#FF7517;
+    --grey: #3E3939;
+    --black: #2C2727; 
+    --white: #F6F4F4;
+}
+body{
+    min-height: 100vh;
+    background-color: var(--white);
+}
+header{
+    background-color: var(--orange);
+    
+}
+
+footer{
+    background-color: var(--orange);
+    margin-bottom: 0;
+}
+
+.col{
+    border: 2px solid var(--black);
+}
+
+
+.otp-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+.otp-box {
+    text-align: center;
+}
+.otp-code {
+    font-size: 2em;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.dice-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+.dice-box {
+    text-align: center;
+}
+.dice-face {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.guess-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+.guess-box {
+    margin-top: 30vh;
+    text-align: center;
+}
+.result-message {
+    font-size: 1.5em;
+    margin-top: 20px;
+}
+
+.main{
+    margin-top: 4vh;
+}
+
+.btn{
+    background-color: var(--black);
+    color: var(--orange);
+}
+.btn:hover{
+    background-color: var(--orange);
+    color: var(--black);
+}
+
+.coin-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.coin-box {
+    text-align: center;
+}
+.coin-result {
+    font-size: 2em;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+
+.rps-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+.rps-box {
+    text-align: center;
+}
+.result-message {
+    font-size: 1.5em;
+    margin-top: 20px;
+}
+.choices {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+.choice-btn {
+    font-size: 1.2em;
+}
+
+.color-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    text-align: center;
+}
+.color-display {
+    width: 200px;
+    height: 200px;
+    margin-top: 20px;
+    border: 2px solid #000;
+}
+.color-code {
+    font-size: 1.2em;
+    margin-top: 20px;
+}
